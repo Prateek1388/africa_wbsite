@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africa - By Prateek</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            display: none; /* Hide all sections by default */
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        section.active {
+            display: block; /* Show the active section */
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Image styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Africa - By Prateek</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('geography')">Geography</a></li>
+                <li><a href="#" onclick="showSection('culture')">Culture</a></li>
+                <li><a href="#" onclick="showSection('wildlife')">Wildlife</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="active">
+        <h2>Welcome to Africa!</h2>
+        <p>Africa is a vast and diverse continent with rich cultural heritage, stunning landscapes, and diverse wildlife. Explore more about Africa by navigating through the links above.</p>
+        <img src="africa_map.jpg" alt="Map of Africa">
+    </section>
+
+    <section id="geography">
+        <h2>Geography of Africa</h2>
+        <p>Africa is the second-largest continent in the world, covering over 30 million square kilometers. It is home to diverse landscapes, including deserts, rainforests, mountains, and savannas.</p>
+        <img src="africa_geography.jpg" alt="Geography of Africa">
+    </section>
+
+    <section id="culture">
+        <h2>African Culture</h2>
+        <p>Africa has a rich cultural diversity, with over 3,000 ethnic groups. Each group has its own language, traditions, and customs. Music, dance, and storytelling are essential parts of African culture.</p>
+        <img src="african_culture.jpg" alt="African Culture">
+    </section>
+
+    <section id="wildlife">
+        <h2>Wildlife of Africa</h2>
+        <p>Africa is home to some of the most iconic wildlife species in the world, including lions, elephants, giraffes, and rhinos. The continent's diverse ecosystems provide a haven for both rare and common species.</p>
+        <img src="africa_wildlife.jpg" alt="African Wildlife">
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Africa by Prateek</p>
+    </footer>
+
+    <script>
+        // Function to show the clicked section and hide the others
+        function showSection(sectionId) {
+            // Hide all sections
+            let sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
